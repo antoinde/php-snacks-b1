@@ -48,14 +48,14 @@ $partite= [
         'punti_casa' => 123,
         'punti_ospite' => 113
     ]
-    ];
+];
     
     
 ?>
 <h2>Partite: </h2>
 
 <?php
-    for($i=0; $i < strlen($partite) ; $i++) {
+    for($i=0; $i < count($partite) ; $i++) {
         echo '<p>';
         echo $partite[$i]['casa'];
         echo ' - ';
