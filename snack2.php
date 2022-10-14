@@ -10,4 +10,31 @@ Passare come parametri GET name, mail e age e verificare
 
  */
 
+
+    $name = '';
+    if ( isset($_GET['name']) ){
+        $name = $_GET['name'];
+    }
+
+    $mail = '';
+    if ( isset($_GET['mail']) ){
+        $mail = $_GET['mail'];
+    }
+
+    $age = '';
+    if ( isset($_GET['age']) ){
+        $age = $_GET['age'];
+    }
+   
+    $atPos = strpos($mail, '@'); 
+    $dotPos = strpos($mail, '.', $atPos) ;
+
+
+
+    if(strlen($name) > 3 && $atPos > 0 && $dotPos > 0 && is_numeric($age)){
+        echo 'Accesso riuscito';
+    }else{
+        echo 'Accesso negato';
+    }
+
  ?>
